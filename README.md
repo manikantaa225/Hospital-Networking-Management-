@@ -42,12 +42,12 @@ This setup simulates a real-world enterprise building with multiple departments 
 
 ---
 
-## 🔹 Router Configurations
+## Router Configurations
 
 ### Router1
 cisco
-hostname Router1
-ip dhcp pool Abhi
+hostname Router1 <br>
+ip dhcp pool Abhi  <br>
  network 192.168.6.0 255.255.255.0
  default-router 192.168.6.1
  dns-server 192.168.6.1
