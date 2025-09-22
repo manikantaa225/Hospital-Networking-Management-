@@ -129,12 +129,14 @@ VLAN 40 → Fa0/4, Fa0/5
 VLAN 50 → Fa0/6, Fa0/7, Fa0/8
 Trunk → Fa0/1 (VLANs 1,30,40,50)
 
-
+<img width="891" height="595" alt="Image" src="https://github.com/user-attachments/assets/a6646b7b-5f68-428a-bf29-4aefd5df31a2" />
 
 Switch# show vlan brief
 VLAN 10 → Fa0/2, Fa0/3, Fa0/6
 VLAN 20 → Fa0/4, Fa0/5
 Trunk → Fa0/1 (VLANs 1,10,20)
+
+
 
 ⚙️ Routing Protocol
 OSPF Area 0 is used across all routers.
