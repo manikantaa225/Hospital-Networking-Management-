@@ -158,6 +158,7 @@ interface range fa0/6 , fa0/7     <br>
 interface fa0/8    <br>
  switchport mode access       <br>
  switchport access vlan 60     <br>
+! <br>
 
 ! <br>
 interface fa0/1     <br>
@@ -167,8 +168,22 @@ interface fa0/1     <br>
 
 <img width="908" height="565" alt="Image" src="https://github.com/user-attachments/assets/3ab8eeb1-2297-41c1-9cc7-8573f4238b75" />
 
-## Router 2
-hostname Router2
+## FLOOR 2
+
+<img width="769" height="358" alt="Image" src="https://github.com/user-attachments/assets/2a8d7dce-9739-4d39-9b51-23e750313c0a" />
+
+## Device used   <br>
+3 PCs → PC2, PC3, PC4   <br>
+3 Printers → Printer2, Printer3, Printer4       <br>
+1 Laptop → Laptop1    <br>
+1 Smartphone → Smartphone0    <br>
+1 Access Point → Access Point5    <br>
+1 Switch → Switch2     <br>
+1 Router → Router2     <br>
+
+## Router configuration
+
+hostname Router2 <br>
 !  <br>
 DHCP   <br>
 ip dhcp pool vlan30  <br>
@@ -234,8 +249,39 @@ line vty 0 4       <br>
 transport input ssh    <br>
 login local       <br>
 <img width="988" height="614" alt="Image" src="https://github.com/user-attachments/assets/6550e3fd-4f04-465d-82c3-de9f9effab24" />
-<img width="769" height="358" alt="Image" src="https://github.com/user-attachments/assets/2a8d7dce-9739-4d39-9b51-23e750313c0a" />
 
+## Switch confiiguration
+hostname Switch2 <br>
+!     <br>
+vlan 30  <br>
+name Reception   <br>
+vlan 40   <br>
+name Pharmacy  <br>
+vlan 50  <br>
+name Nursing   <br>
+!   <br>
+
+!  <br>
+interface  range  fa0/2 , fa0/3   <br>
+switchport mode access    <br>
+switchport access vlan 30  <br>
+
+interface range  fa0/4 , fa0/5   <br>
+switchport mode access     <br>
+switchport access vlan 40    <br>
+
+interface  range fa0/6  , fa0/7  , fa0/8  <br> 
+switchport mode access  <br> 
+switchport access vlan 50    <br> 
+! <br>
+
+! <br>
+interface fa0/1   <br>
+switchport mode trunk  <br>
+switchport trunk allowed vlan 1,30,40,50  <br>
+! <br>
+
+<img width="891" height="595" alt="Image" src="https://github.com/user-attachments/assets/a6646b7b-5f68-428a-bf29-4aefd5df31a2" />
 
 ## Router 3
 hostname Router3
@@ -295,7 +341,7 @@ router ospf 10   <br>
 
 
 
-<img width="891" height="595" alt="Image" src="https://github.com/user-attachments/assets/a6646b7b-5f68-428a-bf29-4aefd5df31a2" />
+
 
 Switch# show vlan brief   <br>
 VLAN 10 → Fa0/2, Fa0/3, Fa0/6   <br>
