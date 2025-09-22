@@ -146,3 +146,7 @@ Provides inter-VLAN communication between floors.
 📡 DHCP Configuration
 Each VLAN is assigned a separate DHCP pool from its connected router.
 Devices (PCs, Laptops, Smartphones, Printers) get IPs dynamically.
+
+##  Output
+
+<img width="822" height="699" alt="Image" src="https://github.com/user-attachments/assets/7cc510d1-8103-4d8d-9914-cb49679de552" />
