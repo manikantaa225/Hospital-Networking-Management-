@@ -120,12 +120,16 @@ VLAN 70 → Fa0/4, Fa0/5
 VLAN 80 → Fa0/6, Fa0/7
 Trunk → Fa0/1 (VLANs 1,60,70,80)
 
+<img width="908" height="565" alt="Image" src="https://github.com/user-attachments/assets/3ab8eeb1-2297-41c1-9cc7-8573f4238b75" />
+
 
 Switch# show vlan brief
 VLAN 30 → Fa0/2, Fa0/3
 VLAN 40 → Fa0/4, Fa0/5
 VLAN 50 → Fa0/6, Fa0/7, Fa0/8
 Trunk → Fa0/1 (VLANs 1,30,40,50)
+
+
 
 Switch# show vlan brief
 VLAN 10 → Fa0/2, Fa0/3, Fa0/6
