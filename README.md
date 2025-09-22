@@ -1,7 +1,7 @@
 # Hospital-Networking-Management
 # Multi-Floor VLAN & OSPF Topology
 
-## 📌 Overview
+## Overview
 This project represents a multi-floor enterprise network topology designed using Cisco Packet Tracer.
 The network is divided into three floors, each with its own VLANs for efficient traffic segmentation and management. Inter-VLAN communication is enabled using router-on-a-stick (sub-interfaces), and OSPF (Open Shortest Path First) is implemented as the dynamic routing protocol to ensure connectivity between different floors.
 
@@ -16,13 +16,13 @@ OSPF Area 0 used to share routes between routers and ensure network scalability.
 Inter-VLAN Routing for communication across VLANs and floors.
 This setup simulates a real-world enterprise building with multiple departments across floors, where VLANs enhance security and efficiency, and OSPF ensures full connectivity.
 
-## 🖼️ Network Topology
+##  Network Topology
 
 <img width="1599" height="673" alt="Image" src="https://github.com/user-attachments/assets/fadf6bd0-2b55-4204-934d-87b0d9c948bb" />
 
 ---
 
-## 🗂️ IP Addressing Scheme
+##  IP Addressing Scheme
 
 | VLAN  | Subnet            | Default Gateway | Floor |
 |-------|------------------|-----------------|-------|
@@ -45,7 +45,7 @@ This setup simulates a real-world enterprise building with multiple departments 
 ## 🔹 Router Configurations
 
 ### Router1
-```cisco
+cisco
 hostname Router1
 ip dhcp pool Abhi
  network 192.168.6.0 255.255.255.0
@@ -92,7 +92,7 @@ router ospf 10
  network 192.168.4.0 0.0.0.255 area 0
  network 192.168.5.0 0.0.0.255 area 0
 
-
+ 
 hostname Router3
 ip dhcp pool vlan10
  network 192.168.1.0 255.255.255.0
