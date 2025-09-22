@@ -405,7 +405,14 @@ conclusion :  <br>
 ## OSPF Routing & Verification  <br>
 Objective: <br>
      Ensure optimized routing between routers and networks
-<img width="1915" height="805" alt="Image" src="https://github.com/user-attachments/assets/96e579e6-63e0-4c84-8515-7cb7ab49cb60" />
+Verification Command:  <br>
+     1) show ospf neighbors ~ To check neighbours of the Router   <br>
+     2) show ip route ospf  ~ Routes of all subnets  <br>
+
+ Conclusion :   <br>
+<img width="1909" height="802" alt="Image" src="https://github.com/user-attachments/assets/e407928b-70f2-4311-abb0-a92784168f54" />
+
+
 ##  Output   <br>
 
 
