@@ -412,8 +412,21 @@ Verification Command:  <br>
  Conclusion :   <br>
 <img width="1909" height="802" alt="Image" src="https://github.com/user-attachments/assets/e407928b-70f2-4311-abb0-a92784168f54" />
 
+##SSH & Security Verification <br>
 
-##  Output   <br>
+ <img width="822" height="699" alt="Image" src="https://github.com/user-attachments/assets/7cc510d1-8103-4d8d-9914-cb49679de552" />
 
+##End-to-End Connectivity Verification   <br>
+Objective:   <br>
+     Verify full network functionality across all VLANs and floors.   <br>
 
-<img width="822" height="699" alt="Image" src="https://github.com/user-attachments/assets/7cc510d1-8103-4d8d-9914-cb49679de552" />
+Tests performed:   <br>
+     Ping from any floor to any floor across VLANs   <br>
+
+Example:  <br>
+      PC1 (VLAN20, floor-3) ↔ PC4 (VLAN50, floor-2) → Success  <br>
+      Traceroute to confirm traffic is routed through Router1 and OSPF paths  <br>
+       Ping printers from PCs to verify networked printing across VLANs  <br>
+Conclusion: <br>
+      Full end-to-end connectivity is achieved; routing, DHCP, and VLAN configurations are correct.   <br>
+  
