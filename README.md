@@ -413,6 +413,18 @@ Verification Command:  <br>
 <img width="1909" height="802" alt="Image" src="https://github.com/user-attachments/assets/e407928b-70f2-4311-abb0-a92784168f54" />
 
 ##SSH & Security Verification <br>
+Objective: <br>
+      Verify secure remote access to routers.   <br>
+Tests performed:             <br>
+       Attempt SSH login:         <br>
+       ssh -L Abhi @Router1           <br>
+       Enter password cisco123          <br>
+       Expected result: Successful login        <br>
+ Verify show running-config contains:          <br>
+       ip ssh version 2                    <br>
+       line vty 0 4 with transport input ssh and login local         <br>
+Conclusion:         <br>
+    SSH is enforced; local user authentication is working correctly.       <br>
 
  <img width="822" height="699" alt="Image" src="https://github.com/user-attachments/assets/7cc510d1-8103-4d8d-9914-cb49679de552" />
 
@@ -429,4 +441,4 @@ Example:  <br>
        Ping printers from PCs to verify networked printing across VLANs  <br>
 Conclusion: <br>
       Full end-to-end connectivity is achieved; routing, DHCP, and VLAN configurations are correct.   <br>
-  
+  <img width="822" height="699" alt="Image" src="https://github.com/user-attachments/assets/43b9131a-bc38-47a3-bbe7-10969375416e" />
