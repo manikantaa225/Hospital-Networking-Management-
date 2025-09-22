@@ -1,5 +1,4 @@
-# Hospital-Networking-Management
-# Multi-Floor VLAN & OSPF Topology
+# Hospital-Networking-Management-System-Cisco-Packet-Tracer
 
 ## Overview
 This project represents a multi-floor enterprise network topology designed using Cisco Packet Tracer.
@@ -35,7 +34,7 @@ This setup simulates a real-world enterprise building with multiple departments 
 | 70    | 192.168.7.0/24   | 192.168.7.1     | 1     |
 | 80    | 192.168.8.0/24   | 192.168.8.1     | 1     |
 
-**WAN Links (Serial Interfaces):**
+ Links (Serial Interfaces)
 - R1 ↔ R3 → 10.10.10.0/30  
 - R2 ↔ R3 → 10.10.10.4/30  
 - R1 ↔ R2 → 10.10.10.8/30  
