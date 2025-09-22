@@ -412,7 +412,7 @@ Verification Command:  <br>
  Conclusion :   <br>
 <img width="1909" height="802" alt="Image" src="https://github.com/user-attachments/assets/e407928b-70f2-4311-abb0-a92784168f54" />
 
-##SSH & Security Verification <br>
+## SSH & Security Verification <br>
 Objective: <br>
       Verify secure remote access to routers.   <br>
 Tests performed:             <br>
@@ -428,7 +428,7 @@ Conclusion:         <br>
 
  <img width="822" height="699" alt="Image" src="https://github.com/user-attachments/assets/7cc510d1-8103-4d8d-9914-cb49679de552" />
 
-##End-to-End Connectivity Verification   <br>
+## End-to-End Connectivity Verification   <br>
 Objective:   <br>
      Verify full network functionality across all VLANs and floors.   <br>
 
