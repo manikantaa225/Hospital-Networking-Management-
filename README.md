@@ -42,7 +42,7 @@ This setup simulates a real-world enterprise building with multiple departments 
 ---
 
 ## Router Configurations
-
+## Router 1
 hostname Router1  <br>
 
 !    <br>
@@ -122,45 +122,72 @@ login local    <br>
 <img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
 
 
-hostname Router2  <br>
-ip dhcp pool vlan30 <br>
- network 192.168.3.0 255.255.255.0 <br>
- default-router 192.168.3.1  <br>
- dns-server 192.168.3.1  <br>
-ip dhcp pool vlan40    <br>
- network 192.168.4.0 255.255.255.0   <br>
- default-router 192.168.4.1   <br>
- dns-server 192.168.4.1  <br>
-ip dhcp pool vlan50    <br>
- network 192.168.5.0 255.255.255.0   <br>
- default-router 192.168.5.1   <br>
- dns-server 192.168.5.1   <br>
-!
-router ospf 10    <br>
- network 10.10.10.8 0.0.0.3 area 0  <br>
- network 10.10.10.4 0.0.0.3 area 0   <br>
- network 192.168.3.0 0.0.0.255 area 0   <br>
- network 192.168.4.0 0.0.0.255 area 0   <br>
- network 192.168.5.0 0.0.0.255 area 0   <br>
+## Router 2
+hostname Router2
+!  <br>
+DHCP   <br>
+ip dhcp pool vlan30  <br>
+ network 192.168.3.0 255.255.255.0    <br>
+ default-router 192.168.3.1    <br>
+ dns-server 192.168.3.1    <br>
 
-<img width="988" height="614" alt="Image" src="https://github.com/user-attachments/assets/1b50c170-5c40-45cc-93ae-20d9435b650b" />
-<img width="769" height="358" alt="Image" src="https://github.com/user-attachments/assets/5ef0ed91-6382-49ea-896c-3476606eb391" />
- 
-hostname Router3    <br>
-ip dhcp pool vlan10   <br>
- network 192.168.1.0 255.255.255.0   <br>
- default-router 192.168.1.1  <br>
- dns-server 192.168.1.1  <br>
-ip dhcp pool vlan20    <br>
- network 192.168.2.0 255.255.255.0   <br>
- default-router 192.168.2.1   <br>
- dns-server 192.168.2.1   <br>
+ip dhcp pool vlan40   <br>
+ network 192.168.4.0 255.255.255.0   <br> 
+ default-router 192.168.4.1    <br>
+ dns-server 192.168.4.1     <br>
+
+ip dhcp pool vlan50   <br>
+ network 192.168.5.0 255.255.255.0    <br>
+ default-router 192.168.5.1    <br>
+ dns-server 192.168.5.1    <br>
 !
-router ospf 10    <br>
- network 10.10.10.4 0.0.0.3 area 0   <br>
- network 10.10.10.0 0.0.0.3 area 0  <br>
- network 192.168.1.0 0.0.0.255 area 0   <br>
- network 192.168.2.0 0.0.0.255 area 0    <br>
+
+! <br>
+Interfaces    <br>
+interface GigabitEthernet0/0    <br>
+ no ip address  <br>
+ no shutdown   <br>
+
+interface GigabitEthernet0/0.30  <br>
+ encapsulation dot1Q 30    <br>
+ ip address 192.168.3.1 255.255.255.0    <br>
+
+interface GigabitEthernet0/0.40  <br>
+ encapsulation dot1Q 40    <br>
+ ip address 192.168.4.1 255.255.255.0    <br>
+
+interface GigabitEthernet0/0.50    <br>
+ encapsulation dot1Q 50     <br>
+ ip address 192.168.5.1 255.255.255.0   <br>
+
+interface Serial0/3/0    <br>
+ ip address 10.10.10.6 255.255.255.252   <br>
+ no shutdown     <br>
+
+interface Serial0/3/1   <br>
+ ip address 10.10.10.9 255.255.255.252    <br>
+ clock rate 64000      <br>
+ no shutdown       <br>
+ !    <br>
+
+! <br>
+Routing   <br> 
+router ospf 10     <br>
+ network 10.10.10.4 0.0.0.3 area 0    <br>
+ network 10.10.10.8 0.0.0.3 area 0      <br>
+ network 192.168.3.0 0.0.0.255 area 0     <br>
+ network 192.168.4.0 0.0.0.255 area 0   <br>
+ network 192.168.5.0 0.0.0.255 area 0     <br>
+
+ ! <br>
+SSH  <br>
+username chetan secret cisco123   <br>
+ip domain-name hospital.local    <br>
+crypto key generate rsa      <br>
+ip ssh version 2      <br>
+line vty 0 4       <br>
+transport input ssh    <br>
+login local       <br>
 
 <img width="972" height="585" alt="Image" src="https://github.com/user-attachments/assets/7f955568-1b26-4697-82bc-1766a27599e0" />
 <img width="799" height="308" alt="Image" src="https://github.com/user-attachments/assets/35877749-4790-4060-a520-427c37102b7a" />
