@@ -43,28 +43,65 @@ This setup simulates a real-world enterprise building with multiple departments 
 
 ## Router Configurations
 
-### Router1
-cisco
-hostname Router1 <br>
-ip dhcp pool Abhi  <br>
- network 192.168.6.0 255.255.255.0 <br>
- default-router 192.168.6.1 <br>
- dns-server 192.168.6.1 <br>
-ip dhcp pool Mani <br>
- network 192.168.7.0 255.255.255.0 <br>
- default-router 192.168.7.1 <br>
- dns-server 192.168.7.1 <br>
-ip dhcp pool Chetan <br>
- network 192.168.8.0 255.255.255.0 <br>
- default-router 192.168.8.1 <br>
- dns-server 192.168.8.1 <br>
+hostname Router1  <br>
+
+! DHCP   <br>
+ip dhcp pool Abhi   <br>
+ network 192.168.6.0 255.255.255.0   <br>
+ default-router 192.168.6.1   <br>
+ dns-server 192.168.6.1    <br>
+
+ip dhcp pool Mani      <br>
+ network 192.168.7.0 255.255.255.0    <br>
+ default-router 192.168.7.1    <br>
+ dns-server 192.168.7.1    <br>
+
+ip dhcp pool Chetan    <br>
+ network 192.168.8.0 255.255.255.0   <br>
+ default-router 192.168.8.1    <br>
+ dns-server 192.168.8.1     <br>
+  
+!  Interfaces    <br>
+interface GigabitEthernet0/0   <br>
+ no ip address   <br>
+ no shutdown    <br>
 !
-router ospf 10    <br>
- network 10.10.10.8 0.0.0.3 area 0   <br>
- network 10.10.10.0 0.0.0.3 area 0   <br>
- network 192.168.6.0 0.0.0.255 area 0   <br>
- network 192.168.7.0 0.0.0.255 area 0   <br>
- network 192.168.8.0 0.0.0.255 area 0    <br>
+
+interface GigabitEthernet0/0.60    <br>
+ encapsulation dot1Q 60     <br>
+ ip address 192.168.6.1 255.255.255.0    <br>
+!
+
+interface GigabitEthernet0/0.70    <br>
+ encapsulation dot1Q 70        <br>
+ ip address 192.168.7.1 255.255.255.0     <br>
+!
+
+interface GigabitEthernet0/0.80    <br>
+ encapsulation dot1Q 80     <br>
+ ip address 192.168.8.1 255.255.255.0    <br>
+!
+
+interface Serial0/3/0     <br>
+ ip address 10.10.10.1 255.255.255.252    <br>
+ clock rate 64000     <br>
+ no shutdown    <br>
+!
+
+interface Serial0/3/1    <br>
+ ip address 10.10.10.10 255.255.255.252    <br>
+ clock rate 64000     <br>
+ no shutdown      <br>
+!
+
+!  Routing     <br>
+router ospf 10     <br>
+ network 10.10.10.0 0.0.0.3 area 0     <br>
+ network 10.10.10.8 0.0.0.3 area 0     <br>
+ network 192.168.6.0 0.0.0.255 area 0     <br>
+ network 192.168.7.0 0.0.0.255 area 0     <br>
+ network 192.168.8.0 0.0.0.255 area 0     <br>
+
 
 <img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
 <img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
