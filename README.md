@@ -18,7 +18,7 @@ This setup simulates a real-world enterprise building with multiple departments 
 
 ## 🖼️ Network Topology
 
-
+<img width="1599" height="673" alt="Image" src="https://github.com/user-attachments/assets/fadf6bd0-2b55-4204-934d-87b0d9c948bb" />
 ---
 
 ## 🗂️ IP Addressing Scheme
@@ -65,6 +65,8 @@ router ospf 10
  network 192.168.6.0 0.0.0.255 area 0
  network 192.168.7.0 0.0.0.255 area 0
  network 192.168.8.0 0.0.0.255 area 0
+
+
 
 hostname Router2
 ip dhcp pool vlan30
