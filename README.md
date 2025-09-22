@@ -44,7 +44,7 @@ This setup simulates a real-world enterprise building with multiple departments 
 ## FLOOR 1
 
 <img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
-## Device used
+## Device used   <br>
 3 PCs → PC5, PC6, PC7   <br>
 3 Printers → Printer5, Printer6, Printer7       <br>
 1 Laptop → Laptop0    <br>
@@ -53,7 +53,7 @@ This setup simulates a real-world enterprise building with multiple departments 
 1 Switch → Switch1     <br>
 1 Router → Router1     <br>
 
-## Router one Configurations
+## Router  Configurations
 hostname Router1  <br>
 
 !    <br>
@@ -131,7 +131,41 @@ login local    <br>
 
 <img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
 
+## Switch configuration  <br>
+hostname Switch1  <br>
+! <br>
+vlan 60   <br>
+ name HR    <br>
+vlan 70   <br>
+ name Finance   <br>
+vlan 80   <br>
+ name Management   <br>
+!   <br>
 
+!  <br>
+interface range fa0/2 , fa0/3   <br>
+ switchport mode access    <br>
+ switchport access vlan 60    <br>
+
+interface range fa0/4 , fa0/5    <br>
+ switchport mode access     <br>
+ switchport access vlan 70    <br>
+
+interface range fa0/6 , fa0/7     <br>
+ switchport mode access     <br>
+ switchport access vlan 80    <br>
+
+interface fa0/8    <br>
+ switchport mode access       <br>
+ switchport access vlan 60     <br>
+
+! <br>
+interface fa0/1     <br>
+ switchport trunk encapsulation dot1q   <br>
+ switchport mode trunk    <br>
+! <br>
+
+<img width="908" height="565" alt="Image" src="https://github.com/user-attachments/assets/3ab8eeb1-2297-41c1-9cc7-8573f4238b75" />
 
 ## Router 2
 hostname Router2
@@ -254,20 +288,12 @@ router ospf 10   <br>
 <img width="972" height="585" alt="Image" src="https://github.com/user-attachments/assets/7f955568-1b26-4697-82bc-1766a27599e0" />
 <img width="799" height="308" alt="Image" src="https://github.com/user-attachments/assets/35877749-4790-4060-a520-427c37102b7a" />
  
-Switch# show vlan brief    <br>
-VLAN 60 → Fa0/2, Fa0/3, Fa0/8   <br>
-VLAN 70 → Fa0/4, Fa0/5   <br>
-VLAN 80 → Fa0/6, Fa0/7    <br>
-Trunk → Fa0/1 (VLANs 1,60,70,80)   <br>
-
-<img width="908" height="565" alt="Image" src="https://github.com/user-attachments/assets/3ab8eeb1-2297-41c1-9cc7-8573f4238b75" />
 
 
-Switch# show vlan brief   <br>
-VLAN 30 → Fa0/2, Fa0/3   <br>
-VLAN 40 → Fa0/4, Fa0/5  <br>
-VLAN 50 → Fa0/6, Fa0/7, Fa0/8   <br>
-Trunk → Fa0/1 (VLANs 1,30,40,50)   <br>
+
+
+
+
 
 <img width="891" height="595" alt="Image" src="https://github.com/user-attachments/assets/a6646b7b-5f68-428a-bf29-4aefd5df31a2" />
 
