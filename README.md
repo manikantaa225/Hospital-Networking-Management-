@@ -402,8 +402,10 @@ conclusion :  <br>
 <img width="1913" height="872" alt="Image" src="https://github.com/user-attachments/assets/c39ea15f-ef32-456d-be6f-a90f1abbc4d5" />
 
 
-## OSPF Routing & Verification
-
+## OSPF Routing & Verification  <br>
+Objective: <br>
+     Ensure optimized routing between routers and networks
+<img width="1915" height="805" alt="Image" src="https://github.com/user-attachments/assets/96e579e6-63e0-4c84-8515-7cb7ab49cb60" />
 ##  Output   <br>
 
 
