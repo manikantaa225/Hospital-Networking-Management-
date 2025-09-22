@@ -111,7 +111,8 @@ router ospf 10
  network 192.168.1.0 0.0.0.255 area 0
  network 192.168.2.0 0.0.0.255 area 0
 
-
+<img width="972" height="585" alt="Image" src="https://github.com/user-attachments/assets/7f955568-1b26-4697-82bc-1766a27599e0" />
+<img width="799" height="308" alt="Image" src="https://github.com/user-attachments/assets/35877749-4790-4060-a520-427c37102b7a" />
  
 Switch# show vlan brief
 VLAN 60 → Fa0/2, Fa0/3, Fa0/8
