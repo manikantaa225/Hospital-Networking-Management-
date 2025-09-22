@@ -66,6 +66,7 @@ router ospf 10
  network 192.168.7.0 0.0.0.255 area 0
  network 192.168.8.0 0.0.0.255 area 0
 
+<img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
 
 
 hostname Router2
