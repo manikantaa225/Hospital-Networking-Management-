@@ -41,11 +41,19 @@ This setup simulates a real-world enterprise building with multiple departments 
 
 ---
 
-## Router Configurations
 ## FLOOR 1
 
-<img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
+<img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
+## Device used
+3 PCs → PC5, PC6, PC7   <br>
+3 Printers → Printer5, Printer6, Printer7       <br>
+1 Laptop → Laptop0    <br>
+1 Smartphone → Smartphone2     <br>
+1 Access Point → Access Point4    <br>
+1 Switch → Switch1     <br>
+1 Router → Router1     <br>
 
+## Router one Configurations
 hostname Router1  <br>
 
 !    <br>
@@ -121,8 +129,8 @@ transport input ssh    <br>
 login local    <br>
  !     <br>
 
+<img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
 
-<img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
 
 
 ## Router 2
