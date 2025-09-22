@@ -107,6 +107,17 @@ interface Serial0/3/1    <br>
  network 192.168.8.0 0.0.0.255 area 0     <br>
 !     <br>
 
+! <br>
+SSH  <br>
+username abhi secret cisco123 <br>
+ip domain-name hospital.local  <br>
+crypto key generate rsa   <br>
+ip ssh version 2    <br>
+line vty 0 4     <br>
+transport input ssh    <br>
+login local    <br>
+ !     <br>
+
 <img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
 <img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
 
