@@ -44,6 +44,7 @@ This setup simulates a real-world enterprise building with multiple departments 
 ## FLOOR 1
 
 <img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
+
 ## Device used   <br>
 3 PCs → PC5, PC6, PC7   <br>
 3 Printers → Printer5, Printer6, Printer7       <br>
@@ -129,6 +130,7 @@ transport input ssh    <br>
 login local    <br>
  !     <br>
 
+## Router output <br>
 <img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
 
 ## Switch configuration  <br>
@@ -166,6 +168,7 @@ interface fa0/1     <br>
  switchport mode trunk    <br>
 ! <br>
 
+## switch output  <br>
 <img width="908" height="565" alt="Image" src="https://github.com/user-attachments/assets/3ab8eeb1-2297-41c1-9cc7-8573f4238b75" />
 
 ## FLOOR 2
@@ -248,6 +251,8 @@ ip ssh version 2      <br>
 line vty 0 4       <br>
 transport input ssh    <br>
 login local       <br>
+
+## Router output <br>
 <img width="988" height="614" alt="Image" src="https://github.com/user-attachments/assets/6550e3fd-4f04-465d-82c3-de9f9effab24" />
 
 ## Switch confiiguration
@@ -281,11 +286,23 @@ switchport mode trunk  <br>
 switchport trunk allowed vlan 1,30,40,50  <br>
 ! <br>
 
+ ## switch output  <br>
 <img width="891" height="595" alt="Image" src="https://github.com/user-attachments/assets/a6646b7b-5f68-428a-bf29-4aefd5df31a2" />
 
-## Router 3
-hostname Router3
+## FLOOR 3
 
+<img width="799" height="308" alt="Image" src="https://github.com/user-attachments/assets/35877749-4790-4060-a520-427c37102b7a" />
+
+## Device used <br>
+2 PCs → PC0, PC1   <br>
+2 Printers → Printer0, Printer1       <br>
+1 Laptop → Laptop2    <br>
+1 Smartphone → Smartphone2    <br>
+1 Access Point → Access Point6    <br>
+1 Switch → Switch3    <br>
+1 Router → Router3    <br>
+
+hostname Router3 <br>
 ! <br>
 DHCP   <br>
 ip dhcp pool vlan10 <br>  
@@ -331,23 +348,46 @@ router ospf 10   <br>
  network 192.168.1.0 0.0.0.255 area 0    <br>
  network 192.168.2.0 0.0.0.255 area 0    <br>
 
+! <br>
+SSH  <br>
+username mani secret cisco123   <br>
+ip domain-name hospital.local    <br>
+crypto key generate rsa      <br>
+ip ssh version 2      <br>
+line vty 0 4       <br>
+transport input ssh    <br>
+login local       <br>
+
+## Router output  <br>
 <img width="972" height="585" alt="Image" src="https://github.com/user-attachments/assets/7f955568-1b26-4697-82bc-1766a27599e0" />
-<img width="799" height="308" alt="Image" src="https://github.com/user-attachments/assets/35877749-4790-4060-a520-427c37102b7a" />
- 
 
+## Switch configuration
 
+hostname Switch3 <br>
+!     <br>
+vlan 10 <br>
+name admin   <br>
+vlan 20  <br>
+name doctors  <br>
+!   <br>
 
+!  <br>
+interface  range  fa0/2 , fa0/3   <br>
+switchport mode access    <br>
+switchport access vlan 10  <br>
 
+interface range  fa0/4 , fa0/5   <br>
+switchport mode access     <br>
+switchport access vlan 20    <br>
+! <br>
 
+! <br>
+interface fa0/1   <br>
+switchport mode trunk  <br>
+switchport trunk allowed vlan 1,10,20  <br>
+! <br>
 
-
-
-
-Switch# show vlan brief   <br>
-VLAN 10 → Fa0/2, Fa0/3, Fa0/6   <br>
-VLAN 20 → Fa0/4, Fa0/5   <br>
-Trunk → Fa0/1 (VLANs 1,10,20)   <br>
-
+## switch output  <br>
 <img width="954" height="641" alt="Image" src="https://github.com/user-attachments/assets/a82fec29-3213-4305-9cd6-06b93b620254" />
 
 
@@ -355,7 +395,7 @@ Trunk → Fa0/1 (VLANs 1,10,20)   <br>
 OSPF Area 0 is used across all routers.   <br>
 Provides inter-VLAN communication between floors.    <br>
 
-📡 DHCP Configuration     <br>
+ ## DHCP Verification     <br>
 Each VLAN is assigned a separate DHCP pool from its connected router.   <br>
 Devices (PCs, Laptops, Smartphones, Printers) get IPs dynamically.    <br>
 
