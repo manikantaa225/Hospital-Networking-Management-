@@ -42,7 +42,10 @@ This setup simulates a real-world enterprise building with multiple departments 
 ---
 
 ## Router Configurations
-## Router 1
+## FLOOR 1
+
+<img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
+
 hostname Router1  <br>
 
 !    <br>
@@ -118,7 +121,7 @@ transport input ssh    <br>
 login local    <br>
  !     <br>
 
-<img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
+
 <img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
 
 
