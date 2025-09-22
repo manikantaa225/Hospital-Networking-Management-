@@ -391,13 +391,18 @@ switchport trunk allowed vlan 1,10,20  <br>
 <img width="954" height="641" alt="Image" src="https://github.com/user-attachments/assets/a82fec29-3213-4305-9cd6-06b93b620254" />
 
 
- Routing Protocol   <br>
-OSPF Area 0 is used across all routers.   <br>
-Provides inter-VLAN communication between floors.    <br>
 
  ## DHCP Verification     <br>
-Each VLAN is assigned a separate DHCP pool from its connected router.   <br>
-Devices (PCs, Laptops, Smartphones, Printers) get IPs dynamically.    <br>
+Objective: <br>
+     confirm automatic IP address assignment for devices in VLANs   <br>
+Verification command : <br>
+     1) show ip dhcp binding  ~ It will show all leased IPs  <br>
+     
+conclusion :  <br>
+<img width="1913" height="872" alt="Image" src="https://github.com/user-attachments/assets/c39ea15f-ef32-456d-be6f-a90f1abbc4d5" />
+
+
+## OSPF Routing & Verification
 
 ##  Output   <br>
 
