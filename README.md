@@ -48,105 +48,106 @@ This setup simulates a real-world enterprise building with multiple departments 
 cisco
 hostname Router1 <br>
 ip dhcp pool Abhi  <br>
- network 192.168.6.0 255.255.255.0
- default-router 192.168.6.1
- dns-server 192.168.6.1
-ip dhcp pool Mani
- network 192.168.7.0 255.255.255.0
- default-router 192.168.7.1
- dns-server 192.168.7.1
-ip dhcp pool Chetan
- network 192.168.8.0 255.255.255.0
- default-router 192.168.8.1
- dns-server 192.168.8.1
+ network 192.168.6.0 255.255.255.0 <br>
+ default-router 192.168.6.1 <br>
+ dns-server 192.168.6.1 <br>
+ip dhcp pool Mani <br>
+ network 192.168.7.0 255.255.255.0 <br>
+ default-router 192.168.7.1 <br>
+ dns-server 192.168.7.1 <br>
+ip dhcp pool Chetan <br>
+ network 192.168.8.0 255.255.255.0 <br>
+ default-router 192.168.8.1 <br>
+ dns-server 192.168.8.1 <br>
 !
-router ospf 10
- network 10.10.10.8 0.0.0.3 area 0
- network 10.10.10.0 0.0.0.3 area 0
- network 192.168.6.0 0.0.0.255 area 0
- network 192.168.7.0 0.0.0.255 area 0
- network 192.168.8.0 0.0.0.255 area 0
+router ospf 10    <br>
+ network 10.10.10.8 0.0.0.3 area 0   <br>
+ network 10.10.10.0 0.0.0.3 area 0   <br>
+ network 192.168.6.0 0.0.0.255 area 0   <br>
+ network 192.168.7.0 0.0.0.255 area 0   <br>
+ network 192.168.8.0 0.0.0.255 area 0    <br>
 
 <img width="975" height="681" alt="Image" src="https://github.com/user-attachments/assets/f4ec748d-203e-40ce-ad21-a9ec49339293" />
 <img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
 
 
-hostname Router2
-ip dhcp pool vlan30
- network 192.168.3.0 255.255.255.0
- default-router 192.168.3.1
- dns-server 192.168.3.1
-ip dhcp pool vlan40
- network 192.168.4.0 255.255.255.0
- default-router 192.168.4.1
- dns-server 192.168.4.1
-ip dhcp pool vlan50
- network 192.168.5.0 255.255.255.0
- default-router 192.168.5.1
- dns-server 192.168.5.1
+hostname Router2  <br>
+ip dhcp pool vlan30 <br>
+ network 192.168.3.0 255.255.255.0 <br>
+ default-router 192.168.3.1  <br>
+ dns-server 192.168.3.1  <br>
+ip dhcp pool vlan40    <br>
+ network 192.168.4.0 255.255.255.0   <br>
+ default-router 192.168.4.1   <br>
+ dns-server 192.168.4.1  <br>
+ip dhcp pool vlan50    <br>
+ network 192.168.5.0 255.255.255.0   <br>
+ default-router 192.168.5.1   <br>
+ dns-server 192.168.5.1   <br>
 !
-router ospf 10
- network 10.10.10.8 0.0.0.3 area 0
- network 10.10.10.4 0.0.0.3 area 0
- network 192.168.3.0 0.0.0.255 area 0
- network 192.168.4.0 0.0.0.255 area 0
- network 192.168.5.0 0.0.0.255 area 0
+router ospf 10    <br>
+ network 10.10.10.8 0.0.0.3 area 0  <br>
+ network 10.10.10.4 0.0.0.3 area 0   <br>
+ network 192.168.3.0 0.0.0.255 area 0   <br>
+ network 192.168.4.0 0.0.0.255 area 0   <br>
+ network 192.168.5.0 0.0.0.255 area 0   <br>
 
 <img width="988" height="614" alt="Image" src="https://github.com/user-attachments/assets/1b50c170-5c40-45cc-93ae-20d9435b650b" />
 <img width="769" height="358" alt="Image" src="https://github.com/user-attachments/assets/5ef0ed91-6382-49ea-896c-3476606eb391" />
  
-hostname Router3
-ip dhcp pool vlan10
- network 192.168.1.0 255.255.255.0
- default-router 192.168.1.1
- dns-server 192.168.1.1
-ip dhcp pool vlan20
- network 192.168.2.0 255.255.255.0
- default-router 192.168.2.1
- dns-server 192.168.2.1
+hostname Router3    <br>
+ip dhcp pool vlan10   <br>
+ network 192.168.1.0 255.255.255.0   <br>
+ default-router 192.168.1.1  <br>
+ dns-server 192.168.1.1  <br>
+ip dhcp pool vlan20    <br>
+ network 192.168.2.0 255.255.255.0   <br>
+ default-router 192.168.2.1   <br>
+ dns-server 192.168.2.1   <br>
 !
-router ospf 10
- network 10.10.10.4 0.0.0.3 area 0
- network 10.10.10.0 0.0.0.3 area 0
- network 192.168.1.0 0.0.0.255 area 0
- network 192.168.2.0 0.0.0.255 area 0
+router ospf 10    <br>
+ network 10.10.10.4 0.0.0.3 area 0   <br>
+ network 10.10.10.0 0.0.0.3 area 0  <br>
+ network 192.168.1.0 0.0.0.255 area 0   <br>
+ network 192.168.2.0 0.0.0.255 area 0    <br>
 
 <img width="972" height="585" alt="Image" src="https://github.com/user-attachments/assets/7f955568-1b26-4697-82bc-1766a27599e0" />
 <img width="799" height="308" alt="Image" src="https://github.com/user-attachments/assets/35877749-4790-4060-a520-427c37102b7a" />
  
-Switch# show vlan brief
-VLAN 60 → Fa0/2, Fa0/3, Fa0/8
-VLAN 70 → Fa0/4, Fa0/5
-VLAN 80 → Fa0/6, Fa0/7
-Trunk → Fa0/1 (VLANs 1,60,70,80)
+Switch# show vlan brief    <br>
+VLAN 60 → Fa0/2, Fa0/3, Fa0/8   <br>
+VLAN 70 → Fa0/4, Fa0/5   <br>
+VLAN 80 → Fa0/6, Fa0/7    <br>
+Trunk → Fa0/1 (VLANs 1,60,70,80)   <br>
 
 <img width="908" height="565" alt="Image" src="https://github.com/user-attachments/assets/3ab8eeb1-2297-41c1-9cc7-8573f4238b75" />
 
 
-Switch# show vlan brief
-VLAN 30 → Fa0/2, Fa0/3
-VLAN 40 → Fa0/4, Fa0/5
-VLAN 50 → Fa0/6, Fa0/7, Fa0/8
-Trunk → Fa0/1 (VLANs 1,30,40,50)
+Switch# show vlan brief   <br>
+VLAN 30 → Fa0/2, Fa0/3   <br>
+VLAN 40 → Fa0/4, Fa0/5  <br>
+VLAN 50 → Fa0/6, Fa0/7, Fa0/8   <br>
+Trunk → Fa0/1 (VLANs 1,30,40,50)   <br>
 
 <img width="891" height="595" alt="Image" src="https://github.com/user-attachments/assets/a6646b7b-5f68-428a-bf29-4aefd5df31a2" />
 
-Switch# show vlan brief
-VLAN 10 → Fa0/2, Fa0/3, Fa0/6
-VLAN 20 → Fa0/4, Fa0/5
-Trunk → Fa0/1 (VLANs 1,10,20)
+Switch# show vlan brief   <br>
+VLAN 10 → Fa0/2, Fa0/3, Fa0/6   <br>
+VLAN 20 → Fa0/4, Fa0/5   <br>
+Trunk → Fa0/1 (VLANs 1,10,20)   <br>
 
 <img width="954" height="641" alt="Image" src="https://github.com/user-attachments/assets/a82fec29-3213-4305-9cd6-06b93b620254" />
 
 
-⚙️ Routing Protocol
-OSPF Area 0 is used across all routers.
-Provides inter-VLAN communication between floors.
+ Routing Protocol   <br>
+OSPF Area 0 is used across all routers.   <br>
+Provides inter-VLAN communication between floors.    <br>
 
-📡 DHCP Configuration
-Each VLAN is assigned a separate DHCP pool from its connected router.
-Devices (PCs, Laptops, Smartphones, Printers) get IPs dynamically.
+📡 DHCP Configuration     <br>
+Each VLAN is assigned a separate DHCP pool from its connected router.   <br>
+Devices (PCs, Laptops, Smartphones, Printers) get IPs dynamically.    <br>
 
-##  Output
+##  Output   <br>
+
 
 <img width="822" height="699" alt="Image" src="https://github.com/user-attachments/assets/7cc510d1-8103-4d8d-9914-cb49679de552" />
