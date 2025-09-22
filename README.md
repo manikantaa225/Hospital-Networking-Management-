@@ -188,6 +188,57 @@ ip ssh version 2      <br>
 line vty 0 4       <br>
 transport input ssh    <br>
 login local       <br>
+<img width="988" height="614" alt="Image" src="https://github.com/user-attachments/assets/6550e3fd-4f04-465d-82c3-de9f9effab24" />
+<img width="769" height="358" alt="Image" src="https://github.com/user-attachments/assets/2a8d7dce-9739-4d39-9b51-23e750313c0a" />
+
+
+## Router 3
+hostname Router3
+
+! <br>
+DHCP   <br>
+ip dhcp pool vlan10 <br>  
+ network 192.168.1.0 255.255.255.0  <br>
+ default-router 192.168.1.1   <br>
+ dns-server 192.168.1.1    <br>
+
+ip dhcp pool vlan20    <br>
+ network 192.168.2.0 255.255.255.0    <br>
+ default-router 192.168.2.1   <br>
+ dns-server 192.168.2.1     <br>
+! <br>
+
+!  <br>
+Interfaces  <br>
+interface GigabitEthernet0/0  <br>
+ no ip address  <br>
+ no shutdown   <br>
+
+interface GigabitEthernet0/0.10    <br>
+ encapsulation dot1Q 10    <br>
+ ip address 192.168.1.1 255.255.255.0     <br>
+
+interface GigabitEthernet0/0.20    <br>
+ encapsulation dot1Q 20      <br>
+ ip address 192.168.2.1 255.255.255.0    <br>
+
+ 
+interface Serial0/3/0   <br>
+ ip address 10.10.10.2 255.255.255.252    <br>
+ no shutdown    <br>
+
+interface Serial0/3/1    <br>
+ ip address 10.10.10.5 255.255.255.252    <br>
+ no shutdown     <br>
+!<br>
+ 
+! <br> 
+Routing    <br>
+router ospf 10   <br>
+ network 10.10.10.0 0.0.0.3 area 0   <br>
+ network 10.10.10.4 0.0.0.3 area 0    <br>
+ network 192.168.1.0 0.0.0.255 area 0    <br>
+ network 192.168.2.0 0.0.0.255 area 0    <br>
 
 <img width="972" height="585" alt="Image" src="https://github.com/user-attachments/assets/7f955568-1b26-4697-82bc-1766a27599e0" />
 <img width="799" height="308" alt="Image" src="https://github.com/user-attachments/assets/35877749-4790-4060-a520-427c37102b7a" />
