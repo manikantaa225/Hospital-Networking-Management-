@@ -19,6 +19,7 @@ This setup simulates a real-world enterprise building with multiple departments 
 ## 🖼️ Network Topology
 
 <img width="1599" height="673" alt="Image" src="https://github.com/user-attachments/assets/fadf6bd0-2b55-4204-934d-87b0d9c948bb" />
+<img width="757" height="530" alt="Image" src="https://github.com/user-attachments/assets/46d4ee96-104f-442c-a2c9-61cf716e34aa" />
 ---
 
 ## 🗂️ IP Addressing Scheme
