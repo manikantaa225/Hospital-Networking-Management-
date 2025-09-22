@@ -92,6 +92,8 @@ router ospf 10
  network 192.168.4.0 0.0.0.255 area 0
  network 192.168.5.0 0.0.0.255 area 0
 
+<img width="988" height="614" alt="Image" src="https://github.com/user-attachments/assets/1b50c170-5c40-45cc-93ae-20d9435b650b" />
+<img width="769" height="358" alt="Image" src="https://github.com/user-attachments/assets/5ef0ed91-6382-49ea-896c-3476606eb391" />
  
 hostname Router3
 ip dhcp pool vlan10
@@ -109,6 +111,8 @@ router ospf 10
  network 192.168.1.0 0.0.0.255 area 0
  network 192.168.2.0 0.0.0.255 area 0
 
+
+ 
 Switch# show vlan brief
 VLAN 60 → Fa0/2, Fa0/3, Fa0/8
 VLAN 70 → Fa0/4, Fa0/5
