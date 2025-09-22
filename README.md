@@ -136,6 +136,7 @@ VLAN 10 → Fa0/2, Fa0/3, Fa0/6
 VLAN 20 → Fa0/4, Fa0/5
 Trunk → Fa0/1 (VLANs 1,10,20)
 
+<img width="954" height="641" alt="Image" src="https://github.com/user-attachments/assets/a82fec29-3213-4305-9cd6-06b93b620254" />
 
 
 ⚙️ Routing Protocol
